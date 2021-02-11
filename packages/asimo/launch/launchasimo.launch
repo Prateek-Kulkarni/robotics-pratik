@@ -1,7 +1,7 @@
 <launch>
 <include file="$(find mystery_package)/launch/launch_mystery.launch"/>
 <group ns="asimo">
-<node pkg="asimo" name="asimo" type="asimo_1.py"/>
+<node pkg="asimo" name="asimo_1" type="asimo_1.py"/>
 <node pkg="asimo" name="asimo_1subscriber" type="asimo_1subscriber.py"/>
 
 </group>
