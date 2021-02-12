@@ -14,7 +14,6 @@ def asimo1node():
         fibonacci=x+y
         x=y
         y=fibonacci
-        rospy.loginfo(fibonacci)
         pub.publish(fibonacci)
         rate.sleep()
 
