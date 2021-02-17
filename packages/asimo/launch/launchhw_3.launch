@@ -1,0 +1,8 @@
+<launch>
+<include file="$(find mystery_package)/launch/launch_mystery.launch"/>
+<group ns="asimo">
+<node pkg="asimo" name="asimo_1" type="asimo_1.py"/>
+<node pkg="asimo" name="hw_3node" type="hw3_node.py"/>
+
+</group>
+</launch>
