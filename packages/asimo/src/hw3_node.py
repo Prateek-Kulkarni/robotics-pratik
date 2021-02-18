@@ -18,7 +18,7 @@ class hw3node:
 
 
 
-if __init__ == '__main__':
+if __name__ == '__main__':
     rospy.init_node('hw3_node')
     hw3node()
 
