@@ -6,7 +6,7 @@ from mystery_package.msg import UnitsLabelled
 class hw3node:
     def __init__(self):
         rospy.Subscriber("/mystery/output2", UnitsLabelled, self.callback)
-        self.pub_units = rospy.Publisher("hw3output3", UnitsLabelled, queue_size=10)
+        self.pub_units = rospy.Publisher("hw3output", UnitsLabelled, queue_size=10)
         self.total=0
         self.pub_msg = UnitsLabelled()
         self.pub_msg.units= "feet"
