@@ -5,7 +5,7 @@ from std_msgs.msg import String
 from std_msgs.msg import Float32
 
 def asimo1node():
-    pub = rospy.Publisher('/mystery/input', Float32, queue_size=10)
+    pub = rospy.Publisher('/input', Float32, queue_size=10)
     rospy.init_node('asimo_node', anonymous=True)
     rate = rospy.Rate(1) # 1hz
     x=0

@@ -1,0 +1,10 @@
+<launch>
+<param name="hw4units" type="String" value="smoots"/>
+<node pkg="mystery_package" name="mystery_node" type="mystery_node.py"/>
+<node pkg="asimo" name="asimo_1" type="asimo_1.py"/>
+<node pkg="asimo" name="hw4" type="hw4.py"/>
+<remap from="output2" to="converted_total"/>
+<node pkg="asimo" name="asimo_1subscriber" type="asimo_1subscriber.py"/>
+
+
+</launch>
