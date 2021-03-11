@@ -1,7 +1,7 @@
-
+#!/usr/bin/env python3
 import rospy
 from std_msgs.msg import Float32
-from duckietown_msgs.msg import Twist2DStamped
+from duckietown_msgs.msg import Twist2DStamped, FSMstate
 
 class Square:
     def __init__(self):
