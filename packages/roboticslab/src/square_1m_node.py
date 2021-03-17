@@ -32,7 +32,7 @@ if __name__ == '__main__':
                 ob.move(0,0)#stop
                 rate.sleep()
             for count in range(0,6):
-                ob.move(0,4)#90degree left turn
+                ob.move(0,3)#90degree left turn
                 rate.sleep()
             ob.move(0,0)
         ob.move(0,0)
