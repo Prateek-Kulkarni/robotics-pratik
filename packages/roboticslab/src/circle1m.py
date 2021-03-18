@@ -13,7 +13,7 @@ class Circle:
         go_msg.v=y
         go_msg.omega=x
 
-        self.pub.publish(move_msg)
+        self.pub.publish(go_msg)
 
 
 if __name__ == '__main__':
