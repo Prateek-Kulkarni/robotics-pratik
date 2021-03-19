@@ -25,7 +25,7 @@ if __name__ == '__main__':
         #for count in range(0,100):#10 second timer
         while not rospy.is_shutdown():
             if count<40:
-                pattern.go(0.2,1.2)
+                pattern.go(0.2,1.4)
             elif count>=40:
                 break
             else:

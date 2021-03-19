@@ -3,7 +3,7 @@ import rospy
 from std_msgs.msg import Float32
 from duckietown_msgs.msg import Twist2DStamped
 
-class Square:
+class line:
     def __init__(self):
         self.pub = rospy.Publisher("car_cmd_switch_node/cmd", Twist2DStamped, queue_size=10)
 
@@ -17,11 +17,11 @@ class Square:
 
 if __name__ == '__main__':
     try:
-        rospy.init_node('square1m')
-        pattern=Square()
+        rospy.init_node('line1m')
+        pattern=line()
         rate=rospy.Rate(10)
         count=0
-        for c in range(0,4):#square each side
+        for c in range(0,1):
             for count in range(0,10):
                 pattern.go(0,0)#stop
                 rate.sleep()
