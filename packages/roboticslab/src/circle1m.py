@@ -24,14 +24,14 @@ if __name__ == '__main__':
         count = 0
         #for count in range(0,100):#10 second timer
         while not rospy.is_shutdown():
-            if count<40:
+            if count<32:
                 pattern.go(0.2,1.4)
-            elif count>=40:
-                break
-            else:
+            elif count>=32:
                 pattern.go(0,0)
+                break
             count += 1
             rate.sleep()
+        
 
     except rospy.ROSInterruptException:
         pass

@@ -32,7 +32,6 @@ if __name__ == '__main__':
                 pattern.go(0,0)#stop
                 rate.sleep()
             
-            pattern.go(0,0)
         pattern.go(0,0)
     except rospy.ROSInterruptException:
         pass

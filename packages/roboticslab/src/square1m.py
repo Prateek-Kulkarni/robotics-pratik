@@ -21,7 +21,7 @@ if __name__ == '__main__':
         pattern=Square()
         rate=rospy.Rate(10)
         count=0
-        for c in range(0,4):#square each side
+        for c in range(0,4):#square sides
             for count in range(0,10):
                 pattern.go(0,0)#stop
                 rate.sleep()
