@@ -1,0 +1,4 @@
+
+<launch>
+    <node pkg="imageprocessing" name="hw7" type="hw7.py"/>
+</launch>
