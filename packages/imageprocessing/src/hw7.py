@@ -7,9 +7,10 @@ from cv_bridge import CvBridge
 
 class hw7:
     def __init__(self):
-        rospy.Subscriber("image",Image, self.callback)
+        rospy.Subscriber("image", Image, self.callback)
         self.pub = rospy.Publisher("image_cropped", Image, queue_size=10)
         self.pub1 = rospy.Publisher("image_white", Image, queue_size=10)
+        self.pub2 = rospy.Publisher("image_yellow", Image, queue_size=10)
         self.bridge = CvBridge()
 
     def callback(self, data):
@@ -20,9 +21,15 @@ class hw7:
         self.pub.publish(ros_cropped)
 
         cv_hsv = cv2.cvtColor(cv_cropped,cv2.COLOR_BGR2HSV)
-        cv_white_filter= cv2.inRange(cv_hsv, (1,0,170),(180,30,255))
-        ros_white = self.bridge.cv2_to_imgmsg(cv_cropped, "bgr8")
+        cv_white_filter= cv2.inRange(cv_hsv, (1,0,150),(180,30,255))
+        cv_white_filtered_image= cv2.bitwise_and(cv_cropped, cv_cropped, mask=cv_white_filter)
+        ros_white = self.bridge.cv2_to_imgmsg(cv_white_filtered_image, "bgr8")
         self.pub1.publish(ros_white)
+
+        cv_yellow_filter= cv2.inRange(cv_hsv, (0,80,200),(38,255,255))
+        cv_yellow_filtered_image= cv2.bitwise_and(cv_cropped, cv_cropped, mask=cv_yellow_filter)
+        ros_yellow = self.bridge.cv2_to_imgmsg(cv_yellow_filtered_image, "bgr8")
+        self.pub2.publish(ros_yellow)
 
 
 if __name__ == "__main__":
