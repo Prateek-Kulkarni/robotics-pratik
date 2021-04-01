@@ -45,7 +45,7 @@ class Lab4:
         self.pub.publish(output_str)
 
 if __name__ == "__main__":
-    rospy.init_node("lab4_node")
+    rospy.init_node("lab4")
     Lab4()
     
     rospy.spin()
