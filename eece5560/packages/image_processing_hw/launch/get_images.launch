@@ -1,7 +1,0 @@
-<launch>
-
-    <group ns="$(env VEHICLE_NAME)">
-        <node name="get_images" pkg="image_processing_hw" type="get_images.py"/>
-    </group>
-
-</launch>
