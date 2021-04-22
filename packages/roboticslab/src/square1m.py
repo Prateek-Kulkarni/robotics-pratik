@@ -32,7 +32,7 @@ if __name__ == '__main__':
                 pattern.go(0,0)#stop
                 rate.sleep()
             for count in range(0,6):
-                pattern.go(0,2)#turn 90 towards left
+                pattern.go(0,2.1)#turn 90 towards left
                 rate.sleep()
             pattern.go(0,0)
         pattern.go(0,0)

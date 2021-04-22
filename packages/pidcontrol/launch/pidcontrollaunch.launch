@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find controls_hw)/launch/start_dynamics.launch"/>
+    <node pkg="pidcontrol" name="pid_control" type="propIntDiff_control.py"/>
+</launch>

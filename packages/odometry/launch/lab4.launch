@@ -1,6 +1,0 @@
-<launch>
-    <include file="$(find roboticslab)/launch/lab2circle.launch"/>
-    <group ns="$(env VEHICLE_NAME)">
-        <node pkg="odometry" name="lab4" type="lab4.py"/>
-    </group>
-</launch>
