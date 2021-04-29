@@ -1,6 +1,6 @@
 # parameters
-ARG REPO_NAME="prateek-kulkarni"
-ARG DESCRIPTION="robotics-pratik"
+ARG REPO_NAME="robotics-pratik"
+ARG DESCRIPTION="robotics"
 ARG MAINTAINER="Pratik Kulkarni (pratik_kulkarni@student.uml.edu)"
 # pick an icon from: https://fontawesome.com/v4.7.0/icons/
 ARG ICON="cube"

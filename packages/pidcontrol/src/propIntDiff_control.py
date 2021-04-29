@@ -25,7 +25,7 @@ if __name__ == "__main__" :
     rospy.init_node('pid_control')
     rospy.set_param("controller_ready","true")
     timing=rospy.get_rostime()
-    PID_Control(0.185,0.00009,1.9,timing.secs)#p=0.18,i=0.00009,d=1.9
+    PID_Control(1.3,0.00009,1.9,timing.secs)#p=0.18,i=0.00009,d=1.9
     while rospy.get_param("controller_ready")=="true":
         pass
     

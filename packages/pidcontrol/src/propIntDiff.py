@@ -26,11 +26,11 @@ class PID:
         dt = time_stamp-self.past_time_stamp
         if not dt:
             return 0
-        differential = (error-self.prev_error)/dt
+        self.differential = (error-self.prev_error)/dt
         self.integral += error*dt
         new_heading = self.kp*error
         new_heading += self.ki*self.integral
-        new_heading += self.kd*differential
+        new_heading += self.kd*self.differential
         self.past_time_stamp=time_stamp
         self.prev_error=error
         return new_heading
