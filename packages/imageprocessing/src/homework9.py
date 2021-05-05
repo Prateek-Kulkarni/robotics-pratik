@@ -17,7 +17,6 @@ def fibonacci_client(num):
     rospy.loginfo("goal sent")
     client.wait_for_result()
     rospy.loginfo("goal received")
-
     return client.get_result()
 
 def fibcalc(num):

@@ -2,6 +2,6 @@
 <include file="$(find example_service)/launch/fibonacci.launch"/>
 <include file="$(find example_action_server)/launch/fibonacci.launch"/>
 
-  <node pkg="imageprocessing" name="homework9" type="homework9.py"/>
+<node pkg="imageprocessing" name="homework9" type="homework9.py"/>
  
 </launch>
